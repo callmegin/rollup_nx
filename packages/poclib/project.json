@@ -11,7 +11,9 @@
         "entryFile": "packages/poclib/src/index.ts",
         "outputPath": "dist/packages/poclib",
         "main": "packages/poclib/src/index.ts",
-        "tsConfig": "packages/poclib/tsconfig.lib.json"
+        "tsConfig": "packages/poclib/tsconfig.lib.json",
+        "rollupConfig": "packages/poclib/rollup.config.js",
+        "format": ["umd"]
       }
     },
     "lint": {
