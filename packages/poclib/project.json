@@ -1,0 +1,33 @@
+{
+  "root": "packages/poclib",
+  "sourceRoot": "packages/poclib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/poclib",
+        "main": "packages/poclib/src/index.ts",
+        "tsConfig": "packages/poclib/tsconfig.lib.json",
+        "assets": ["packages/poclib/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/poclib/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/poclib"],
+      "options": {
+        "jestConfig": "packages/poclib/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
